@@ -1,0 +1,113 @@
+.item {
+    box-shadow: 0 0 30px rgb(71, 67, 67);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.item:hover {
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+.item .name {
+    color: tomato;
+    font-size: 20px;
+}
+
+.item .price {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 20px;
+}
+
+.item button {
+    margin-top: 10px;
+    background-color: rgb(223, 17, 93) !important;
+    color: ivory;
+}
+
+input {
+    border: 1px solid rgb(86, 85, 86) !important;
+    box-shadow: none;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.ant-select-selector{
+    border: 1px solid rgb(86, 85, 86) !important;
+    box-shadow: none;
+    outline: none;   
+}
+
+.category {
+ background-color: slategrey;
+ color: ivory;
+ margin-right: 100px; 
+ align-items: center; 
+ border-radius:5px;
+ padding-left: 25px;
+ box-shadow: 0 0 10px rgb(71, 67, 67);
+ cursor: pointer;
+}
+
+/* .category:hover{
+    background-color: rgb(223, 17, 93);
+    box-shadow: 0 0 30px rgb(223, 17, 93);
+} */
+
+.category h4 {
+    margin-right: 25px;
+    color: ivory;
+    font-size: 22px;
+}
+
+.category img {
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0 !important;
+}
+
+.selected-category {
+    background-color: rgb(223, 17, 93);
+    box-shadow: 0 0 10px rgb(223, 17, 93);
+}
+
+/* .subtotal {
+    background-color: darkslategrey;
+    display: flex;
+    align-items: baseline;
+} */
+.subtotal h3 {
+    color: slategrey;
+    font-size: 35px;
+    padding: 15px;
+}
+
+/*------------------------------------------*/
+.bill-header {
+    border-bottom: 2px dashed slategrey;
+}
+.bill-model h3 {
+    font-size: 30px;
+}
+
+.bill-model p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.dotted-border {
+    border-bottom: 2px dashed slategrey;
+}
+
+
+@media only screen and (max-width:600px){
+    .categories {
+        overflow-x: scroll;
+        width: 100%;
+    }
+}
