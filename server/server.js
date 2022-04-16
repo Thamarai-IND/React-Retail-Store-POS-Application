@@ -3,7 +3,6 @@ const DBconnect = require('./mongoDBConnect');
 //const data = require('./statisData.json')
 const app = express();
 app.use(express.json());
-
 const itemsRoute = require('./routes/itemsRoute');
 const usersRoute = require('./routes/usersRoute');
 const billsRoute = require('./routes/billsRoute');
@@ -17,9 +16,10 @@ app.get('/',(req,res) => {
 const path = require('path');
 
 if(process.env.NODE_ENV==='production') {
-    app.use('/',express.static('pos-client/build'))
+    //app.use('/',express.static('client/build'))
+    app.use(express.static(path.resolve(__dirname, "./client/build")));
     app.get('*', (req, res)=> {
-        res.sendFile(path.resolve(__dirname,'pos-client/build/index.html'))
+        res.sendFile(path.resolve(__dirname,'./client/build','index.html'))
     })
 }
 
